@@ -13,7 +13,7 @@ const Details = () => {
   useEffect(() => {
     const setter = () => setRoles([...state.coworkerDetails]);
     setter();
-  }, [state.coworkerDetails]);
+  }, [state]);
   const handleSelectNewRole = (ind, value) => {
     const rows = [...workRole];
     rows[ind] = {
@@ -26,6 +26,7 @@ const Details = () => {
     const rows = state.coworkerDetails;
 
     dispatch(deleteCoWorker(rows.filter((item) => item.id !== ind)));
+    setRoles([]);
   };
   const handleResend = () => {
     dispatch(updateCoWorker(workRole));
