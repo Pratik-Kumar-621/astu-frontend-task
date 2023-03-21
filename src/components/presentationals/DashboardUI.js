@@ -6,11 +6,15 @@ import HeadingUI from "./HeadingUI";
 
 const DashboardUI = () => {
   return (
-    <div>
-      <LeftBar />
-      <HeadingUI />
-      <Invite />
-      <Details />
+    <div className="dashboard_main">
+      <div className="left_bar">
+        <LeftBar />
+      </div>
+      <div className="dashboard_content">
+        <HeadingUI />
+        <Invite />
+        <Details />
+      </div>
     </div>
   );
 };

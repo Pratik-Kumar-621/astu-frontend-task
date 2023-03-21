@@ -1,0 +1,129 @@
+.invite_main {
+  position: relative;
+  .invite_info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.75rem;
+  }
+  .invite_heading {
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    color: #323232;
+  }
+  .invite_list_input {
+    .invite_item {
+      margin-bottom: 1rem;
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+      .input_email {
+        width: 400px;
+        transform: scale(1, 0.8);
+        background-color: #f5f5f5;
+        border-radius: 7px;
+        .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+          transform: scale(1, 1.2) !important;
+        }
+        margin-right: 1.8rem;
+      }
+      .select_role {
+        margin-right: 0.7rem;
+        transform: scale(1, 0.8);
+        border-radius: 7px;
+        background-color: #f5f5f5;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+          transform: scale(1, 1.2) !important;
+        }
+      }
+    }
+  }
+  .error {
+    color: red;
+    margin: 0.5rem 0;
+  }
+  .add_row {
+    margin: 1rem 0 0.5rem;
+  }
+  .send_invite {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0.5rem;
+    margin-top: -3rem;
+    button {
+      text-transform: none;
+      border-radius: 7px;
+    }
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .invite_main {
+    .invite_list_input {
+      .invite_item {
+        .input_email {
+          width: 240px;
+          margin-right: 1.2rem;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 880px) {
+  .invite_main {
+    .invite_list_input {
+      .invite_item {
+        .input_email {
+          width: 360px;
+          margin-right: 1.2rem;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 700px) {
+  .invite_main {
+    .invite_list_input {
+      .invite_item {
+        .input_email {
+          width: 240px;
+          margin-right: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 500px) {
+  .invite_main {
+    position: relative;
+    .invite_info {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 0.25rem;
+    }
+    .invite_heading {
+      padding: 0.5rem 0;
+      margin-bottom: 1rem;
+      color: #323232;
+    }
+    .invite_list_input {
+      .invite_item {
+        .input_email {
+          width: 170px;
+
+          margin-right: 1rem;
+        }
+        .select_role {
+          margin-right: 0.4rem;
+
+          padding-left: 0.35rem;
+          padding-right: 0.35rem;
+        }
+      }
+    }
+  }
+}

@@ -7,17 +7,17 @@ const reducer = (state = initialState, action) => {
     case "ADD_COWORKERS":
       return {
         ...state,
-        coworkerDetails: [...state.coworkerDetails, action.payload],
+        coworkerDetails: [...state.coworkerDetails, ...action.payload],
       };
     case "DELETE_COWORKER":
       return {
         ...state,
-        coworkerDetails: action.payload,
+        coworkerDetails: [...action.payload],
       };
     case "UPDATE_COWORKER":
       return {
         ...state,
-        coworkerDetails: action.payload,
+        coworkerDetails: [...action.payload],
       };
     default:
       return state;

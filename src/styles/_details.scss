@@ -1,0 +1,149 @@
+.details_main {
+  .nothing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    img {
+      width: 240px;
+      margin-bottom: 1.2rem;
+    }
+    .no_text {
+      font-size: 1.2rem;
+      color: #323232;
+    }
+  }
+  .list_workers {
+    table {
+      tr {
+        th {
+          text-align: left;
+          font-size: 1.25rem;
+          font-weight: 600;
+        }
+        td {
+          text-align: left;
+        }
+        .row_email {
+          width: 18rem;
+          a {
+            color: #323232;
+            text-decoration: none;
+          }
+        }
+        .row_role {
+          width: 8rem;
+        }
+        .row_delete,
+        .row_update {
+          width: 5rem;
+          text-align: right;
+        }
+        .owner {
+          color: #767676;
+          a {
+            color: #767676;
+          }
+        }
+        .select_detail {
+          margin-right: 0.7rem;
+          transform: scale(1, 0.8);
+          border-radius: 7px;
+          background-color: #f5f5f5;
+          padding-left: 0.7rem;
+          padding-right: 0.7rem;
+          .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+            transform: scale(1, 1.2) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .details_main {
+    .list_workers {
+      table {
+        tr {
+          th {
+            text-align: left;
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+          td {
+            text-align: left;
+          }
+          .row_email {
+            width: 18rem;
+            a {
+              color: #323232;
+              text-decoration: none;
+            }
+          }
+          .row_role {
+            width: 8rem;
+          }
+          .row_delete,
+          .row_update {
+            width: 5rem;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 600px) {
+  .details_main {
+    .nothing {
+      padding: 1.5rem 0;
+      img {
+        width: 160px;
+        margin-bottom: 0.75rem;
+      }
+      .no_text {
+        font-size: 1rem;
+      }
+    }
+    .list_workers {
+      table {
+        tr {
+          th {
+            text-align: left;
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+          td {
+            text-align: left;
+          }
+          .row_email {
+            width: 12rem;
+            a {
+              color: #323232;
+              text-decoration: none;
+            }
+          }
+          .row_role {
+            width: 8rem;
+          }
+          .row_delete,
+          .row_update {
+            width: 1rem;
+            text-align: right;
+          }
+
+          .select_detail {
+            margin-right: 0.35rem;
+            transform: scale(1, 0.6);
+            padding-left: 0rem;
+            padding-right: 0rem;
+            .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+              transform: scale(1, 1.4) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

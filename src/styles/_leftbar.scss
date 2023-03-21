@@ -1,0 +1,160 @@
+.left_bar_main {
+  .logo {
+    padding: 2.5rem 1.5rem 1rem;
+  }
+  .details {
+    margin: 1.2rem 1.5rem 1.7rem;
+    padding: 1rem 0.7rem;
+    background: rgba(17, 97, 214, 0.05);
+    display: flex;
+    border-radius: 11px;
+    justify-content: space-between;
+    align-items: center;
+    color: #f5f5f5;
+    .person_details {
+      display: flex;
+      align-items: center;
+      .image {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #1161d6;
+        background-color: white;
+        padding: 0.35rem 0.7rem;
+        border-radius: 7px;
+        margin-right: 1rem;
+      }
+      .name_item {
+        .person_name {
+          font-weight: 500;
+        }
+        .person_website {
+          color: white;
+          text-decoration: none;
+          font-size: 14px;
+        }
+      }
+    }
+    .modal_btn {
+      button {
+        padding: 0px;
+        min-width: 0 !important;
+        background-color: #163562 !important;
+        border-radius: 50%;
+      }
+    }
+  }
+  .links {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    .link_item {
+      display: flex;
+      align-items: center;
+      color: #f5f5f5;
+      cursor: pointer;
+      padding: 0.7rem 1.5rem;
+      transition: all 0.15s linear;
+      &:hover {
+        color: white;
+        background: #37609a;
+      }
+      .item_icon {
+        font-size: 0.85rem;
+        margin-right: 0.7rem;
+      }
+      .item_name {
+        margin-top: -3px;
+      }
+    }
+    .active_link {
+      color: white;
+      background: #37609a;
+    }
+  }
+}
+
+.dialog_container {
+  padding: 1.5rem 1.25rem;
+  .title_dialog {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.2rem;
+    color: #323232;
+    border-bottom: 1px solid #eaeaea;
+  }
+  .dialog_content {
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    .text_inputs {
+      min-width: 360px;
+      margin-bottom: 1rem;
+      transform: scale(1, 0.8);
+      .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+        transform: scale(1, 1.2) !important;
+      }
+    }
+  }
+  .dialog_footers {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    button {
+      width: 5.5rem;
+    }
+  }
+}
+
+@media all and (max-width: 880px) {
+  .left_bar_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.6rem;
+    .logo {
+      padding: 0;
+    }
+    .details {
+      margin: 1.2rem 0;
+      width: 100%;
+      padding: 1rem 0.7rem;
+    }
+    .links {
+      margin-top: 0.25rem;
+      margin-bottom: 0rem;
+      width: 100%;
+      .link_item {
+        display: flex;
+        align-items: center;
+        color: #f5f5f5;
+        cursor: pointer;
+        padding: 0.7rem 0.75rem;
+        transition: all 0.15s linear;
+        border-radius: 7px;
+        &:hover {
+          color: white;
+          background: #37609a;
+        }
+        .item_icon {
+          font-size: 0.85rem;
+          margin-right: 0.7rem;
+        }
+        .item_name {
+          margin-top: -3px;
+        }
+      }
+      .active_link {
+        color: white;
+        background: #37609a;
+      }
+    }
+  }
+  .dialog_container {
+    .dialog_content {
+      .text_inputs {
+        min-width: 300px;
+      }
+    }
+  }
+}
