@@ -7,13 +7,36 @@ const Details = () => {
   const owner = {
     email: "pratikmuz20@gmail.com",
   };
+
   const state = useSelector((state) => state);
+  const [selectedCoworker, setSelectedCoworkers] = useState([]);
+
+  const selectCoworker = (ind, value, checked) => {
+    const row = [...selectedCoworker];
+    row[ind] = {
+      ...row[ind],
+      checked: checked,
+    };
+    setSelectedCoworkers(row);
+  };
+
   const dispatch = useDispatch();
   const [workRole, setRoles] = useState([...state.coworkerDetails]);
   useEffect(() => {
     const setter = () => setRoles([...state.coworkerDetails]);
     setter();
   }, [state]);
+  useEffect(() => {
+    const value = () => {
+      const selectList = workRole?.map((item) => ({
+        id: item.id,
+        email: item.email,
+        checked: false,
+      }));
+      setSelectedCoworkers(selectList);
+    };
+    value();
+  }, [state, workRole]);
   const handleSelectNewRole = (ind, value) => {
     const rows = [...workRole];
     rows[ind] = {
@@ -31,6 +54,34 @@ const Details = () => {
   const handleResend = () => {
     dispatch(updateCoWorker(workRole));
   };
+
+  const [showDraw, setShowDraw] = useState(false);
+  useEffect(() => {
+    const val = () => {
+      if (selectedCoworker.filter((i) => i.checked === true).length === 0) {
+        setShowDraw(false);
+      }
+    };
+    val();
+  }, [selectCoworker]);
+  const openDrawer = () => {
+    setShowDraw(true);
+  };
+  const closeDrawer = () => {
+    setShowDraw(false);
+  };
+
+  const handleDeleteSelected = () => {
+    const fList = [
+      ...workRole.filter(
+        (item) => !selectedCoworker.find((sc) => sc.id === item.id).checked
+      ),
+    ];
+    console.log("Flist:", fList);
+    dispatch(updateCoWorker(fList));
+    setSelectedCoworkers([]);
+    closeDrawer();
+  };
   return (
     <DetailsUI
       {...{
@@ -40,6 +91,12 @@ const Details = () => {
         workRole,
         handleSelectNewRole,
         handleResend,
+        selectedCoworker,
+        selectCoworker,
+        handleDeleteSelected,
+        showDraw,
+        openDrawer,
+        closeDrawer,
       }}
     />
   );

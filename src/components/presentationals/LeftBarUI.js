@@ -2,6 +2,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { Dialog, TextField } from "@mui/material";
+import Logo from "../../static/logo.png";
 const LeftBarUI = (props) => {
   const {
     links,
@@ -22,7 +23,7 @@ const LeftBarUI = (props) => {
     <div className="left_bar_main">
       {/* logo */}
       <div className="logo">
-        <img src="./images/logo.png" alt="" />
+        <img src={Logo} alt="" />
       </div>
       <>
         {/* details */}
